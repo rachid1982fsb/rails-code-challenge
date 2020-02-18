@@ -27,10 +27,10 @@ class ArticlePolicy
     end
   
     def update?
-        @current_user.editor?
+        @current_user.editor? and @article.user == @current_user
     end
   
     def destroy?
-        @current_user.editor?
+        @current_user.editor? and @article.user == @current_user
     end
 end
