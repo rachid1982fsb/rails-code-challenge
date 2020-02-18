@@ -1,0 +1,19 @@
+<fieldset>
+<legend><h3>User Details</h3></legend>
+
+<%= form_for @user do |f| %>
+    <%= f.label :email %>:<br>
+    <%= f.text_field :email %><br>
+    <br>
+    <%= f.label :password %>:<br>
+    <%= f.text_field :password %><br>
+    <br>
+    <%= f.label :password_confirmation %>:<br>
+    <%= f.text_field :password_confirmation %><br>
+    <br>
+    <%= f.label :role %>:<br>
+    <%= f.select :role, options_for_select([ "user", "editor","admin" ])%><br>
+    <br>
+    <%= f.submit %>
+   <% end %>
+  </fieldset>
